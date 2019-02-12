@@ -5,23 +5,22 @@
 window.addEventListener("keydown", checkKeyPressed);
   
 let sounds = {
-  56:"openhat", 
-  66:"kick",
-  73:"boom",
-  70:"hihat",
-  71:"snare",
-  72:"tom",
-  75:"clap",
-  84:"ride"
+  56:"/sounds/openhat.wav", 
+  66:"/sounds/kick.wav",
+  73:"/sounds/boom.wav",
+  70:"/sounds/hihat.wav",
+  71:"/sounds/snare.wav",
+  72:"/sounds/tom.wav",
+  75:"/sounds/clap.wav",
+  77:"/sounds/tink.wav",
+  84:"/sounds/ride.wav",
+  86:"/sounds/openhat.wav"
  };
 
-const main = document.getElementById("main");
+
 function checkKeyPressed (e) {
-  
-  let keyCode = e.which;
-  console.log(keyCode);
-  let sound = document.getElementById(sounds[keyCode])
-  console.log(sound);
-  sound.play();
-  
-}
+    let keyCode = e.which;
+    let sound = new Audio(sounds[keyCode]);
+    sound.play();
+};
+
