@@ -7,9 +7,88 @@ body {
 }
 
 .container {
-    min-height: 100vh;
-    min-width:100vw;
+    height: 100vh;
+    width:100vw;
     background-image: linear-gradient(45deg, #050505 0%, #252525 100%);
+    display: grid;
+    grid-template-columns: 10vw repeat(5, 1fr) 10vw;
+    grid-template-rows: 15vh repeat(4, 1fr) 10vh;
+    justify-items: center;
+}
+
+#title {
+    grid-area: 1 / 2 / span 1 / span 5;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5vw;
+    margin: 0;
+}
+p {
+    font-size: 1vw;
+}
+
+.imgSize1 {
+    width: 12vw;
+}
+
+.subcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ride {
+    grid-area: 2 / 4 / span 1 / span 1; 
+    width: 12vw;
+    border-radius: 50%;
+    z-index: 10;
+}
+#hihat {
+    grid-area: 3 / 2 / span 1 / span 1; 
+    border-radius: 50%;
+}
+#snare {
+    grid-area: 3 / 3 / span 2 / span 1; 
+    background: green;
+    border-radius: 50%;
+    z-index: 10;
+}
+#tom {
+    grid-area: 3 / 5 / span 2 / span 1; 
+    background:orange;
+    border-radius: 50%;
+    z-index: 10;
+}
+#clap {
+    grid-area: 3 / 6 / span 1 / span 1; 
+    background: palegreen;
+    border-radius: 50%;
+    z-index: 10;
+}
+#openhat {
+    grid-area: 5 / 2 / span 1 / span 1; 
+    background: pink;
+    border-radius: 50%;
+    z-index: 10;
+}
+#kick {
+    grid-area: 3 / 3 / span 3 / span 3; 
+    background: red;
+    border-radius: 50%;
+    z-index: 0;
+}
+#boom {
+    grid-area: 5 / 6 / span 1 / span 1; 
+    background: skyblue;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 
