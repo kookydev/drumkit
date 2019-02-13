@@ -8,12 +8,12 @@ body {
 }
 
 .container {
-    height: 100%;
-    width:100vw;
-    background-image: linear-gradient(to bottom right, #55555e 0%, #05050e 100%);
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(to bottom, #3c3c58 0%, #010114 100%);
     display: grid;
-    grid-template-columns: 1fr repeat(5, min-content) 1fr;
-    grid-template-rows: 10vh  repeat(8, 1fr) 10vh;
+    grid-template-columns: 1fr repeat(5, 1fr) 1fr;
+    grid-template-rows: 10vh  repeat(8, 1fr) 1vh;
     justify-items: center;
 }
 
@@ -57,8 +57,7 @@ p {
 #ride {
     grid-area: 2 / 4 / span 3 / span 1; 
     width: 12vw;
-    border-radius: 50%;
-    z-index: 10;
+    z-index: 20;
 }
 #hihat {
     grid-area: 5 / 2 / span 2 / span 1; 
@@ -66,47 +65,44 @@ p {
 }
 #snare {
     grid-area: 4 / 3 / span 3 / span 1; 
-    border-radius: 50%;
     z-index: 10;
 }
 #tom {
     grid-area: 4 / 5 / span 3 / span 1; 
-    border-radius: 50%;
     z-index: 10;
 }
 #clap {
     grid-area: 5 / 6 / span 2 / span 1; 
-    border-radius: 50%;
     z-index: 10;
 }
 #closehat {
     grid-area: 7 / 2 / span 2 / span 1; 
-    border-radius: 50%;
     z-index: 10;
 }
 #kick {
     grid-area: 4 / 3 / span 6 / span 3; 
-    border-radius: 50%;
     z-index: 0;
+    overflow: hidden;
+
 }
 #boom {
     grid-area: 7 / 6 / span 2 / span 1; 
-    border-radius: 50%;
     z-index: 10;
 }
 
 #tink {
     grid-area: 3 / 6 / span 2 / span 1; 
-    border-radius: 50%;
     z-index: 10;
 }
 
 .pedal {
-    height: 20vh;
+    max-height: 20vh;
+    max-width: 25vw;
 }
 
 #ridePic {
     transition: transform 0.2s ease-in-out;
+
 }
 #hihatPic {
     transition: transform 0.2s ease-in-out;
@@ -141,3 +137,105 @@ p {
     
 }
 
+@media only screen and (orientation: portrait) {
+    .container {
+        grid-template-columns: repeat(8, 12.5%);
+        grid-template-rows: repeat(12, 8.33%);
+        justify-items: center;
+    }
+    #title {
+        grid-area: 1 / 1 / span 1 / span 8;
+
+    }
+    #title h1 {
+        font-size: 3em;
+    }
+    #title p {
+        display: none;
+    }
+    #ride {
+        grid-area: 2 / 4 / span 2 / span 2; 
+        width: 25vw;
+        height: 25vw;
+    }
+    #ridePic {
+        width: 30vw;
+        height: 30vw;
+    }
+    #hihat {
+        grid-area: 7 / 2 / span 3 / span 2; 
+        width: 30vw;
+        height: 30vw;
+        z-index: 10;
+        align-self: center;
+    }
+    #hihatPic {
+        width: 30vw;
+        height: 30vw;
+    }
+    #snare {
+        grid-area: 3 / 2 / span 2 / span 2; 
+        width: 40vw;
+        height: 40vw;
+    }
+    #snarePic {
+        width: 40vw;
+        height: 40vw;
+    }
+    #tom {
+        grid-area: 3 / 6 / span 3 / span 2; 
+        width: 40vw;
+        height: 40vw;
+    }
+    #tomPic {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    #clap {
+        grid-area: 9 / 5 / span 2 / span 3;
+    }
+    #clapPic {
+        width: 25vw;
+        height: 25vw;   
+    }
+
+    #closehat {
+        grid-area: 10 / 2 / span 2 / span 2; 
+    }
+
+    #closehatPic {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    
+    #kick {
+        grid-area: 3 / 2 / span 4 / span 6; 
+        width: 80vw;
+        height: 75vw;
+
+    }
+
+    #kickPic {
+        width: 80vw;
+        height: 75vw;
+    }
+    #boom {
+        grid-area: 11 / 5 / span 2 / span 3; 
+
+    }
+    #boomPic {
+        width: 25vw;
+        height: 25vw;
+    }
+    
+    #tink {
+        grid-area: 7 / 5 / span 2 / span 3; 
+
+    }
+    #tinkPic {
+        width: 30vw;
+        height: 30vw;
+    }
+}
