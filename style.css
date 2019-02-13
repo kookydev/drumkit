@@ -106,76 +106,38 @@ p {
 }
 
 #ridePic {
-
+    transition: transform 0.2s ease-in-out;
 }
 #hihatPic {
-    
+    transition: transform 0.2s ease-in-out;
+
 }
 #snarePic {
-    
+    transition: transform 0.2s linear;
+
 }
 #tomPic {
-    
+    transition: transform 0.2s linear;
+
 }
 #clapPic {
+    transition: transform 0.1s linear;
     
 }
 #closehatPic {
+    transition: transform 0s linear;
     
 }
 #kickPic {
+    transition: transform 0.1s linear;
     
 }
 #tinkPic {
+    transition: transform 0.2s linear;
     
 }
 #boomPic {
+    transition: transform 0.2s linear;
     
 }
-
-.cymbalAnim {
-
-}
-
-.drumAnim {
-
-}
-
-@keyframes cymbalAnimation {
-    0% {
-        transform: rotateX(0deg);
-    }
-    25% {
-        transform: rotateX(40deg);
-    }
-    50% {
-        transform: rotateX(0deg);
-    }
-    75% {
-        transform: rotateX(-40deg);
-    }
-    100% {
-        transform: rotateX(0deg);
-    }
-}
-
-@keyframes drumAnimation {
-    0% {
-        transform: rotateX(0deg) scale(1);
-    }
-    25% {
-        transform: rotateX(40deg) scale(1.2);
-    }
-    50% {
-        transform: rotateX(0deg) scale(0.95);
-    }
-    75% {
-        transform: rotateX(-40deg) scale(1.1) ;
-    }
-    100% {
-        transform: rotateX(0deg) scale(1);
-    }
-}
-
-
 
