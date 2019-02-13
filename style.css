@@ -4,15 +4,16 @@ body {
     margin: 0;
     color: whitesmoke;
     font-family: 'Lato', sans-serif;
+    background: black;
 }
 
 .container {
     height: 100vh;
     width:100vw;
-    background-image: linear-gradient(45deg, #050505 0%, #252525 100%);
+    background-image: linear-gradient(to bottom right, #55555e 0%, #05050e 100%);
     display: grid;
-    grid-template-columns: 10vw repeat(5, 1fr) 10vw;
-    grid-template-rows: 15vh repeat(4, 1fr) 10vh;
+    grid-template-columns: 1fr repeat(5, min-content) 1fr;
+    grid-template-rows: 13vh repeat(8, min-content) 10vh;
     justify-items: center;
 }
 
@@ -27,6 +28,7 @@ body {
 h1 {
     font-size: 5vw;
     margin: 0;
+    margin-top: 10px;
 }
 p {
     font-size: 1vw;
@@ -34,6 +36,14 @@ p {
 
 .imgSize1 {
     width: 12vw;
+}
+
+.imgSize2 {
+    width: 18vw;
+}
+
+.imgSize3 {
+    width: 35vw;
 }
 
 .subcontainer {
@@ -45,51 +55,52 @@ p {
 }
 
 #ride {
-    grid-area: 2 / 4 / span 1 / span 1; 
+    grid-area: 2 / 4 / span 3 / span 1; 
     width: 12vw;
     border-radius: 50%;
     z-index: 10;
 }
 #hihat {
-    grid-area: 3 / 2 / span 1 / span 1; 
+    grid-area: 3 / 2 / span 2 / span 1; 
     border-radius: 50%;
 }
 #snare {
-    grid-area: 3 / 3 / span 2 / span 1; 
-    background: green;
+    grid-area: 3 / 3 / span 3 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 #tom {
-    grid-area: 3 / 5 / span 2 / span 1; 
-    background:orange;
+    grid-area: 3 / 5 / span 3 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 #clap {
-    grid-area: 3 / 6 / span 1 / span 1; 
-    background: palegreen;
+    grid-area: 3 / 6 / span 2 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 #openhat {
-    grid-area: 5 / 2 / span 1 / span 1; 
-    background: pink;
+    grid-area: 7 / 2 / span 2 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 #kick {
-    grid-area: 3 / 3 / span 3 / span 3; 
-    background: red;
+    grid-area: 4 / 3 / span 6 / span 3; 
     border-radius: 50%;
     z-index: 0;
 }
 #boom {
-    grid-area: 5 / 6 / span 1 / span 1; 
-    background: skyblue;
+    grid-area: 7 / 6 / span 2 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
+
+#tink {
+    grid-area: 5 / 6 / span 2 / span 1; 
+    border-radius: 50%;
+    z-index: 10;
+}
+
 
 
 
