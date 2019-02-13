@@ -85,5 +85,18 @@ function checkKeyPressed(e) {
 
 // Play music by mouse click
 
+document.getElementById("ride").addEventListener("mousedown", function() {trigger(84)});
+document.getElementById("hihat").addEventListener("click", function() {trigger(70)});
+document.getElementById("snare").addEventListener("click", function() {trigger(71)});
+document.getElementById("tom").addEventListener("click", function() {trigger(72)});
+document.getElementById("clap").addEventListener("click", function() {trigger(75)});
+document.getElementById("closehat").addEventListener("click", function() {trigger(86)});
+document.getElementById("kick").addEventListener("click", function() {trigger(66)});
+document.getElementById("tink").addEventListener("click", function() {trigger(73)});
+document.getElementById("boom").addEventListener("click", function() {trigger(77)});
 
-
+function trigger(e) {
+    let sound = new Audio(sounds[e]);
+    sound.play();
+    actions[e]();
+}
