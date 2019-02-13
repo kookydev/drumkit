@@ -8,12 +8,12 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     width:100vw;
     background-image: linear-gradient(to bottom right, #55555e 0%, #05050e 100%);
     display: grid;
     grid-template-columns: 1fr repeat(5, min-content) 1fr;
-    grid-template-rows: 13vh repeat(8, min-content) 10vh;
+    grid-template-rows: 10vh  repeat(8, 1fr) 10vh;
     justify-items: center;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-    font-size: 5vw;
+    font-size: 3.5vw;
     margin: 0;
     margin-top: 10px;
 }
@@ -39,7 +39,7 @@ p {
 }
 
 .imgSize2 {
-    width: 18vw;
+    width: 15vw;
 }
 
 .imgSize3 {
@@ -61,25 +61,25 @@ p {
     z-index: 10;
 }
 #hihat {
-    grid-area: 3 / 2 / span 2 / span 1; 
+    grid-area: 5 / 2 / span 2 / span 1; 
     border-radius: 50%;
 }
 #snare {
-    grid-area: 3 / 3 / span 3 / span 1; 
+    grid-area: 4 / 3 / span 3 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 #tom {
-    grid-area: 3 / 5 / span 3 / span 1; 
+    grid-area: 4 / 5 / span 3 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 #clap {
-    grid-area: 3 / 6 / span 2 / span 1; 
+    grid-area: 5 / 6 / span 2 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
-#openhat {
+#closehat {
     grid-area: 7 / 2 / span 2 / span 1; 
     border-radius: 50%;
     z-index: 10;
@@ -96,11 +96,86 @@ p {
 }
 
 #tink {
-    grid-area: 5 / 6 / span 2 / span 1; 
+    grid-area: 3 / 6 / span 2 / span 1; 
     border-radius: 50%;
     z-index: 10;
 }
 
+.pedal {
+    height: 20vh;
+}
+
+#ridePic {
+
+}
+#hihatPic {
+    
+}
+#snarePic {
+    
+}
+#tomPic {
+    
+}
+#clapPic {
+    
+}
+#closehatPic {
+    
+}
+#kickPic {
+    
+}
+#tinkPic {
+    
+}
+#boomPic {
+    
+}
+
+.cymbalAnim {
+
+}
+
+.drumAnim {
+
+}
+
+@keyframes cymbalAnimation {
+    0% {
+        transform: rotateX(0deg);
+    }
+    25% {
+        transform: rotateX(40deg);
+    }
+    50% {
+        transform: rotateX(0deg);
+    }
+    75% {
+        transform: rotateX(-40deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes drumAnimation {
+    0% {
+        transform: rotateX(0deg) scale(1);
+    }
+    25% {
+        transform: rotateX(40deg) scale(1.2);
+    }
+    50% {
+        transform: rotateX(0deg) scale(0.95);
+    }
+    75% {
+        transform: rotateX(-40deg) scale(1.1) ;
+    }
+    100% {
+        transform: rotateX(0deg) scale(1);
+    }
+}
 
 
 
