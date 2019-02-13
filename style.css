@@ -95,46 +95,78 @@ p {
     z-index: 10;
 }
 
-.pedal {
+#ride::after {
+    grid-area: 2 / 4 / span 3 / span 1; 
+    width: 12vw;
+    z-index: 20;
+}
+#hihat::after {
+    grid-area: 5 / 2 / span 2 / span 1; 
+    border-radius: 50%;
+}
+#snare::after {
+    grid-area: 4 / 3 / span 3 / span 1; 
+    z-index: 10;
+}
+#tom::after {
+    grid-area: 4 / 5 / span 3 / span 1; 
+    z-index: 10;
+}
+#clap::after {
+    grid-area: 5 / 6 / span 2 / span 1; 
+    z-index: 10;
+}
+#closehat::after {
+    grid-area: 7 / 2 / span 2 / span 1; 
+    z-index: 10;
+}
+#kick::after {
+    grid-area: 4 / 3 / span 6 / span 3; 
+    z-index: 0;
+    overflow: hidden;
+
+}
+#boom::after {
+    grid-area: 7 / 6 / span 2 / span 1; 
+    z-index: 10;
+}
+
+#tink::after {
+    grid-area: 3 / 6 / span 2 / span 1; 
+    z-index: 10;
+}
+
+.pedal::after {
     max-height: 20vh;
     max-width: 25vw;
 }
 
-#ridePic {
-    transition: transform 0.2s ease-in-out;
-
+#ridePic::after {
+    content: "T";
 }
-#hihatPic {
-    transition: transform 0.2s ease-in-out;
-
+#hihatPic::after {
+    content: "T";
 }
-#snarePic {
-    transition: transform 0.2s linear;
-
+#snarePic::after {
+    content: "T";
 }
-#tomPic {
-    transition: transform 0.2s linear;
-
+#tomPic::after {
+    content: "T";
 }
-#clapPic {
-    transition: transform 0.1s linear;
-    
+#clapPic::after {
+    content: "T";
 }
-#closehatPic {
-    transition: transform 0s linear;
-    
+#closehatPic::after {
+    content: "T";
 }
-#kickPic {
-    transition: transform 0.1s linear;
-    
+#kickPic::after {
+    content: "T";
 }
-#tinkPic {
-    transition: transform 0.2s linear;
-    
+#tinkPic::after {
+    content: "T";
 }
-#boomPic {
-    transition: transform 0.2s linear;
-    
+#boomPic::after {
+    content: "T";
 }
 
 @media only screen and (orientation: portrait) {
@@ -216,6 +248,8 @@ p {
         height: 75vw;
 
     }
+
+
 
     #kickPic {
         width: 80vw;
