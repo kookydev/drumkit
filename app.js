@@ -2,15 +2,15 @@
 window.addEventListener("keydown", checkKeyPressed);
 
 let sounds = {
-  66:"/sounds/kick.wav",
-  73:"/sounds/tink.wav",
-  70:"/sounds/openhat.wav",
-  71:"/sounds/snare.wav",
-  72:"/sounds/tom.wav",
-  75:"/sounds/clap.wav",
-  77:"/sounds/boom.wav",
-  84:"/sounds/ride.wav",
-  86:"/sounds/hihat.wav"
+  66:"./sounds/kick.wav",
+  73:"./sounds/tink.wav",
+  70:"./sounds/openhat.wav",
+  71:"./sounds/snare.wav",
+  72:"./sounds/tom.wav",
+  75:"./sounds/clap.wav",
+  77:"./sounds/boom.wav",
+  84:"./sounds/ride.wav",
+  86:"./sounds/hihat.wav"
  };
 
 const drumAnimation = (el) => {
@@ -34,8 +34,8 @@ const cymbalAnimation = (el) => {
         },
     73: function tink() {
             let pic = document.getElementById("tinkPic")
-            pic.src="/images/tink2.png"
-            setTimeout(function(){pic.src="/images/tink1.png"}, 100)
+            pic.src="./images/tink2.png"
+            setTimeout(function(){pic.src="./images/tink1.png"}, 100)
         },
     70: function openHat() {
             let pic = document.getElementById("hihatPic");
@@ -51,8 +51,8 @@ const cymbalAnimation = (el) => {
     },
     75: function clap() {
             let pic = document.getElementById("clapPic");
-            pic.src="/images/clap2.png";
-            setTimeout(function(){pic.src="/images/clap1.png"}, 100);
+            pic.src="./images/clap2.png";
+            setTimeout(function(){pic.src="./images/clap1.png"}, 100);
         },
     77: function boom() {
             let pic = document.getElementById("boomPic");
@@ -66,10 +66,10 @@ const cymbalAnimation = (el) => {
     86: function closedHat() {
             let pic = document.getElementById("closehatPic");
             pic.style.transform = "rotateX(20deg)";
-            document.getElementById("hihatPic").src = "/images/hihat2.png";
+            document.getElementById("hihatPic").src = "./images/hihat2.png";
             setTimeout(function(){
                 pic.style.transform = "rotateX(0deg)";
-                document.getElementById("hihatPic").src="/images/hihat1.png";}, 100)
+                document.getElementById("hihatPic").src="./images/hihat1.png";}, 100)
             
         },
    };
